@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Trips · Junction 41</title><link rel="stylesheet" href="css/style.css">
+<style>.portal{display:grid;grid-template-columns:230px 1fr;border:3px solid var(--ink);min-height:260px;box-shadow:8px 8px 0 var(--ink)}.side{background:var(--ink)}
+.side div{color:var(--paper);padding:1rem 1.3rem;font:600 1.1rem var(--display);letter-spacing:.1em;text-transform:uppercase;cursor:pointer;border-left:6px solid transparent}.side div:hover{background:#2a2820}.side div.on{border-color:var(--amber);background:#2a2820;color:var(--amber)}
+.main{padding:2rem;font:600 1.9rem/1.15 var(--display);text-transform:uppercase;background:#fbf6ea}.pass-t td{vertical-align:top;background:#fbf6ea}.hd,.ft{background:var(--ink)!important;color:var(--paper);font:600 1.1rem var(--display);letter-spacing:.1em;text-transform:uppercase}
+.qr{width:140px}.qr div{width:110px;height:110px;background:repeating-conic-gradient(var(--ink) 0 25%,#fff 0 50%) 0 0/22px 22px;border:4px solid var(--ink)}small{font:500 .7rem var(--mono);text-transform:uppercase;color:var(--muted)}
+@media(max-width:640px){.portal{grid-template-columns:1fr}}</style></head><body>
+<div class="util"><div class="wrap"><span>Boarding from <strong>Chennai Central</strong></span>
+  <span><a href="status.html">Helpline 1800-41-4141</a> · <a href="account.html">Sign in</a> · <a href="summary.html">Basket <b class="cnt">1</b></a></span></div></div>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="lamp"></span>Junction <b>41</b></a>
+  <nav class="nav" id="nav"><a href="index.html">Home</a><a href="routes.html">Routes</a><a href="book.html">Book</a><a href="trips.html" class=on>My Trips</a><a href="status.html">Live</a><a href="journal.html">Journal</a><a href="about.html">About</a></nav>
+  <a class="btn" href="book.html">Book a seat</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">MENU</button></div></header><div class="plate"><div class="wrap"><div class="pf-no">◎</div><div>
+  <span class="eyebrow">My Trips</span><h1>My Trips</h1><p>Your dashboard and boarding pass. Click the sidebar to switch panels.</p>
+  <div><span class="tag">div sidebar layout</span><span class="tag">table layout</span><span class="tag">colspan / rowspan</span></div></div></div></div><div class="rails"></div>
+
+<section class="block"><div class="wrap">
+ <div class="portal"><div class="side" id="side">
+  <div class="on" data-t="Welcome back. You have 1 upcoming trip: Nilgiri Whistle, Saturday 07:10.">Dashboard</div>
+  <div data-t="Traveller profile: loyalty tier Silver · 2,480 points · Window seat preferred.">Profile</div>
+  <div data-t="Bookings: 3 completed, 1 upcoming, 0 cancelled.">Bookings</div>
+  <div data-t="Tickets: boarding pass is ready below. Show it at the gate.">Tickets</div>
+  <div data-t="Settings: notifications, saved passengers and password live here.">Settings</div></div>
+  <div class="main" id="main">Welcome back. You have 1 upcoming trip: Nilgiri Whistle, Saturday 07:10.</div></div>
+ <p style="margin:1rem 0"><a class="btn dark" href="account.html">Sign in</a> <a class="btn ghost" href="assist.html">Request assistance</a></p></div></section>
+<section class="block"><div class="wrap"><span class="eyebrow">Boarding pass</span>
+ <table class="pass-t"><tr><td colspan="3" class="hd">Junction 41 · Boarding Pass</td></tr>
+  <tr><td rowspan="2" class="qr"><div aria-hidden="true"></div></td><td><small>Passenger</small><br><strong>Priyansh Mudela</strong></td><td><small>Train</small><br><strong>Nilgiri Whistle</strong></td></tr>
+  <tr><td><small>From → To</small><br><strong>Mettupalayam → Ooty</strong></td><td><small>Departs</small><br><strong>Sat 07:10 · Coach C2 · 14A</strong></td></tr>
+  <tr><td colspan="3" class="ft">Gates close 10 minutes before departure. Have a lovely journey.</td></tr></table></div></section>
+<script>var it=document.querySelectorAll('#side div'),mn=document.getElementById('main');
+it.forEach(function(d){d.addEventListener('click',function(){it.forEach(function(x){x.classList.remove('on')});d.classList.add('on');mn.textContent=d.dataset.t;});});</script>
+<footer class="site-foot"><div class="wrap"><div><strong class="mono">Junction 41 · VIT Line</strong><br>
+  Designed and built by Priyansh Mudela (24MIC0126) · School of Computer Science and Engineering</div>
+  <div class="mono">More: <a href="fest.html">Rail Fest</a> · <a href="careers.html">Careers</a> · <a href="assist.html">Assistance</a> · <a href="account.html">Sign in</a></div>
+  <div class="mono">Mail the station master:<br><a href="mailto:priyansh.mudela2024@vitstudent.ac.in">priyansh.mudela2024@vitstudent.ac.in</a></div></div></footer><script src="js/site.js"></script></body></html>

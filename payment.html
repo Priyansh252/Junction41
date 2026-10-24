@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment · Junction 41</title><link rel="stylesheet" href="css/style.css">
+<style>.steps{display:flex;margin-bottom:2rem;font:600 1rem var(--display);letter-spacing:.1em;text-transform:uppercase}.steps a{flex:1;text-align:center;padding:.7rem .4rem;border:2px solid var(--ink);margin-left:-2px;text-decoration:none;color:var(--ink);background:#fbf6ea}.steps .now{background:var(--amber)}.steps a:hover{background:var(--paper-2)}</style></head><body>
+<div class="util"><div class="wrap"><span>Boarding from <strong>Chennai Central</strong></span>
+  <span><a href="status.html">Helpline 1800-41-4141</a> · <a href="account.html">Sign in</a> · <a href="summary.html">Basket <b class="cnt">1</b></a></span></div></div>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="lamp"></span>Junction <b>41</b></a>
+  <nav class="nav" id="nav"><a href="index.html">Home</a><a href="routes.html">Routes</a><a href="book.html" class=on>Book</a><a href="trips.html">My Trips</a><a href="status.html">Live</a><a href="journal.html">Journal</a><a href="about.html">About</a></nav>
+  <a class="btn" href="book.html">Book a seat</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">MENU</button></div></header><div class="plate"><div class="wrap"><div class="pf-no">2</div><div>
+  <span class="eyebrow">Payment</span><h1>Payment</h1><p>Fields appear only for the method you pick.</p>
+  <div><span class="tag">radio</span><span class="tag">month</span><span class="tag">password</span><span class="tag">conditional fields</span></div></div></div></div><div class="rails"></div>
+
+<section class="block"><div class="wrap"><div class="steps"><a href="book.html">1 · Passenger</a><a href="payment.html" class=now>2 · Payment</a><a href="summary.html">3 · Basket</a></div>
+<form class="pass" data-demo data-next="summary.html" id="pay">
+  <fieldset class="f full"><legend>Pay with</legend><div class="opts">
+  <label><input type="radio" name="pm" value="Credit Card" required checked> Credit Card</label><label><input type="radio" name="pm" value="Debit Card" required> Debit Card</label><label><input type="radio" name="pm" value="UPI" required> UPI</label><label><input type="radio" name="pm" value="Net Banking" required> Net Banking</label><label><input type="radio" name="pm" value="Pay at station" required> Pay at station</label></div></fieldset>
+  <div class="f card"><label for="ch">Card holder</label><input id="ch" placeholder="Name on card"></div>
+  <div class="f card"><label for="cn">Card number</label><input id="cn" inputmode="numeric" maxlength="19" placeholder="XXXX XXXX XXXX XXXX"></div>
+  <div class="f card"><label for="ex">Expiry</label><input id="ex" type="month"></div>
+  <div class="f card"><label for="cv">CVV</label><input id="cv" type="password" maxlength="4" placeholder="•••"></div>
+  <div class="f upi" hidden><label for="up">UPI ID</label><input id="up" placeholder="name@bank"></div>
+  <div class="f"><label for="bs">Billing state</label><select id="bs" required><option value="">Select state</option><option>Tamil Nadu</option><option>Kerala</option><option>Karnataka</option><option>Telangana</option><option>Maharashtra</option><option>Delhi</option></select></div>
+  <div class="f"><label for="bp">PIN code</label><input id="bp" type="number" min="100000" max="999999" required placeholder="6 digits"></div>
+  <label class="opts f full" style="font-size:1rem"><input type="checkbox" required> I accept the fare rules and cancellation policy</label>
+  <div class="actions"><a class="btn ghost" href="book.html">← Back</a><button class="btn" type="submit">Review basket →</button></div></form></div></section>
+<script>
+var pay=document.getElementById('pay');
+function sync(){var m=pay.pm.value,card=/Card/.test(m);document.querySelectorAll('.card').forEach(function(e){e.hidden=!card;e.querySelector('input').required=card;});
+ document.querySelector('.upi').hidden=m!=='UPI';document.getElementById('up').required=m==='UPI';}
+pay.addEventListener('change',sync);sync();</script>
+<footer class="site-foot"><div class="wrap"><div><strong class="mono">Junction 41 · VIT Line</strong><br>
+  Designed and built by Priyansh Mudela (24MIC0126) · School of Computer Science and Engineering</div>
+  <div class="mono">More: <a href="fest.html">Rail Fest</a> · <a href="careers.html">Careers</a> · <a href="assist.html">Assistance</a> · <a href="account.html">Sign in</a></div>
+  <div class="mono">Mail the station master:<br><a href="mailto:priyansh.mudela2024@vitstudent.ac.in">priyansh.mudela2024@vitstudent.ac.in</a></div></div></footer><script src="js/site.js"></script><script src="js/forms.js"></script></body></html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live · Junction 41</title><link rel="stylesheet" href="css/style.css">
+<style>.big{font:700 1.9rem/1 var(--display);text-transform:uppercase;min-height:2rem}.fancy{border:2px solid var(--ink)!important;padding:.6rem!important;transition:background .3s}.fancy.typing{background:#fff0b8}
+.seats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:260px}.seat{aspect-ratio:1;border:2px solid var(--ink);background:#bfe0cf;cursor:pointer;transition:.15s}.seat:hover{transform:scale(1.1)}.seat.sel{background:var(--signal)}.seat.taken{background:#8a8574;cursor:not-allowed}
+.pcard{text-align:center}.pcard img{margin:0 auto 1rem;width:100%;max-width:320px;border:3px solid var(--ink);transition:.3s}.pcard img.hot{transform:rotate(-2deg) scale(1.05);filter:saturate(1.8);box-shadow:8px 8px 0 var(--signal)}
+.pinfo{max-height:0;opacity:0;overflow:hidden;transition:.3s;font:500 .85rem var(--mono)}.pinfo.show{max-height:60px;opacity:1;margin-bottom:.8rem}
+.opt{border:2px solid var(--ink);padding:.6rem 1rem;margin-bottom:.5rem;cursor:pointer;font-family:var(--mono)}.opt.sel{background:var(--amber)}.opt:hover{background:var(--paper-2)}#sub.hi{background:var(--signal);transform:scale(1.05)}</style></head><body>
+<div class="util"><div class="wrap"><span>Boarding from <strong>Chennai Central</strong></span>
+  <span><a href="status.html">Helpline 1800-41-4141</a> · <a href="account.html">Sign in</a> · <a href="summary.html">Basket <b class="cnt">1</b></a></span></div></div>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="lamp"></span>Junction <b>41</b></a>
+  <nav class="nav" id="nav"><a href="index.html">Home</a><a href="routes.html">Routes</a><a href="book.html">Book</a><a href="trips.html">My Trips</a><a href="status.html" class=on>Live</a><a href="journal.html">Journal</a><a href="about.html">About</a></nav>
+  <a class="btn" href="book.html">Book a seat</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">MENU</button></div></header><div class="plate"><div class="wrap"><div class="pf-no">●</div><div>
+  <span class="eyebrow">Live</span><h1>Live desk</h1><p>Search a train, check the signals, pick a seat, preview a coach, lock it with a PIN and rate your trip. Mouse and keyboard both work.</p>
+  <div><span class="tag">mouseover</span><span class="tag">mouseout</span><span class="tag">click</span><span class="tag">keydown</span><span class="tag">keyup</span><span class="tag">event.key</span></div></div></div></div><div class="rails"></div>
+
+<section class="block"><div class="wrap cols">
+ <div class="ticket"><h3>Find a train</h3><div class="f"><label for="ss">Train name or PNR</label><input id="ss" class="fancy" autocomplete="off" placeholder="Enter to search · Esc to clear"></div>
+  <p class="mono" id="ssKey">Key pressed: –</p><p class="mono" id="ssEcho"></p><p class="mono" id="ssMsg" style="color:var(--green)"></p></div>
+
+ <div class="ticket dark"><h3>Line signals</h3><div style="display:flex;gap:1.6rem;align-items:center"><div class="signal-post">
+  <div class="bulb r" data-msg="STOP · line occupied"></div><div class="bulb y" data-msg="READY · next train approaching"></div><div class="bulb g" data-msg="GO · line clear"></div></div>
+  <p id="sigMsg" class="big" style="color:var(--amber)">Hover a lamp</p></div></div>
+
+ <div class="ticket"><h3>Pick a seat</h3><div class="seats" id="seats"><div class="seat" data-s="1A" data-w="window"></div><div class="seat" data-s="1B" data-w="aisle"></div><div class="seat" data-s="1C" data-w="aisle"></div><div class="seat taken" data-s="1D" data-w="window"></div><div class="seat taken" data-s="2A" data-w="window"></div><div class="seat" data-s="2B" data-w="aisle"></div><div class="seat" data-s="2C" data-w="aisle"></div><div class="seat" data-s="2D" data-w="window"></div><div class="seat" data-s="3A" data-w="window"></div><div class="seat taken" data-s="3B" data-w="aisle"></div><div class="seat" data-s="3C" data-w="aisle"></div><div class="seat" data-s="3D" data-w="window"></div><div class="seat" data-s="4A" data-w="window"></div><div class="seat" data-s="4B" data-w="aisle"></div><div class="seat taken" data-s="4C" data-w="aisle"></div><div class="seat" data-s="4D" data-w="window"></div><div class="seat" data-s="5A" data-w="window"></div><div class="seat taken" data-s="5B" data-w="aisle"></div><div class="seat" data-s="5C" data-w="aisle"></div><div class="seat" data-s="5D" data-w="window"></div><div class="seat" data-s="6A" data-w="window"></div><div class="seat" data-s="6B" data-w="aisle"></div><div class="seat" data-s="6C" data-w="aisle"></div><div class="seat" data-s="6D" data-w="window"></div></div><p class="mono" id="seatMsg" style="min-height:1.4em;margin-top:.6rem">Hover a seat. Click to choose.</p></div>
+
+ <div class="ticket"><h3>Coach class</h3><div class="pcard"><img id="pimg" src="img/travel-munnar.svg" alt="Vista Dome coach" width="400" height="260">
+  <div id="pinfo" class="pinfo">Vista Dome · glass roof, 40 seats</div><button class="btn" id="pbtn">View Details</button><p id="pdet" class="mono"></p></div></div>
+
+ <div class="ticket"><h3>Seat-lock PIN</h3><div class="f"><label for="pin">4-digit PIN</label><input id="pin" type="password" maxlength="4" inputmode="numeric" placeholder="••••" autocomplete="off"></div><p class="mono" id="pinMsg"></p></div>
+
+ <div class="ticket"><h3>Quick poll</h3><p><strong>How was your last journey?</strong></p>
+  <div id="opts"><div class="opt" tabindex="0">On time, lovely</div><div class="opt" tabindex="0">Slightly late</div><div class="opt" tabindex="0">Needs work</div></div>
+  <button class="btn dark" id="sub" style="margin-top:1rem">Submit</button><p class="mono" id="exMsg">Click an option, then press Enter.</p></div>
+</div></section>
+<footer class="site-foot"><div class="wrap"><div><strong class="mono">Junction 41 · VIT Line</strong><br>
+  Designed and built by Priyansh Mudela (24MIC0126) · School of Computer Science and Engineering</div>
+  <div class="mono">More: <a href="fest.html">Rail Fest</a> · <a href="careers.html">Careers</a> · <a href="assist.html">Assistance</a> · <a href="account.html">Sign in</a></div>
+  <div class="mono">Mail the station master:<br><a href="mailto:priyansh.mudela2024@vitstudent.ac.in">priyansh.mudela2024@vitstudent.ac.in</a></div></div></footer><script src="js/site.js"></script><script src="js/mouse.js"></script><script src="js/keys.js"></script></body></html>

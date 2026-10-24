@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home · Junction 41</title><link rel="stylesheet" href="css/style.css">
+<style>.slider{position:relative;height:70vh;min-height:380px;overflow:hidden;background:#000;border-bottom:4px solid var(--ink)}
+.slide{position:absolute;inset:0;background-size:cover;background-position:center;display:grid;place-items:center;text-align:center;color:#fff;opacity:0;transition:opacity .9s}.slide::before{content:"";position:absolute;inset:0;background:rgba(10,10,8,.5)}
+.slide.on{opacity:1}.slide div{position:relative;max-width:780px;padding:0 1.4rem}.slide h1{font-size:clamp(2.6rem,7vw,5rem);text-shadow:4px 4px 0 var(--signal)}.slide p{font-size:1.3rem}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:2px solid #fff;font-size:2rem;width:48px;height:48px;cursor:pointer;z-index:3}.arrow:hover{background:var(--signal)}.l{left:14px}.r{right:14px}
+.dots{position:absolute;bottom:16px;left:0;right:0;display:flex;justify-content:center;gap:.5rem;z-index:3}.dots i{width:30px;height:5px;background:#fff6;cursor:pointer}.dots i.on{background:var(--amber)}
+.finder{background:var(--amber);border-bottom:4px solid var(--ink)}.find{display:flex;gap:.7rem;padding:1rem 0;flex-wrap:wrap}.find input,.find select{flex:1;min-width:170px;border:2px solid var(--ink)!important;background:#fffdf5!important;padding:.65rem .9rem!important;border-radius:30px!important;width:auto!important}.find input{flex:2}
+.find .btn{border-radius:30px}.lede{font-size:1.25rem;max-width:60ch}.rc{display:block;text-decoration:none;color:var(--ink);border:2px solid var(--ink);background:#fbf6ea;box-shadow:6px 6px 0 var(--ink);transition:.2s}.rc:hover{transform:translate(-3px,-3px);box-shadow:9px 9px 0 var(--signal)}
+.rc img{width:100%;aspect-ratio:3/2;object-fit:cover;border-bottom:2px solid var(--ink)}.rc div{padding:1rem 1.2rem}.rc h3{margin-bottom:.3rem}</style></head><body>
+<div class="util"><div class="wrap"><span>Boarding from <strong>Chennai Central</strong></span>
+  <span><a href="status.html">Helpline 1800-41-4141</a> · <a href="account.html">Sign in</a> · <a href="summary.html">Basket <b class="cnt">1</b></a></span></div></div>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="lamp"></span>Junction <b>41</b></a>
+  <nav class="nav" id="nav"><a href="index.html" class=on>Home</a><a href="routes.html">Routes</a><a href="book.html">Book</a><a href="trips.html">My Trips</a><a href="status.html">Live</a><a href="journal.html">Journal</a><a href="about.html">About</a></nav>
+  <a class="btn" href="book.html">Book a seat</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">MENU</button></div></header>
+
+<section class="slider" id="slider"><div class="slide on" style="background-image:url(img/slide-1.svg)"><div><h1>See India at train speed</h1><p>Window seats on the country's prettiest lines, booked in two minutes.</p><a class="btn" href="routes.html">Explore routes</a></div></div><div class="slide" style="background-image:url(img/slide-2.svg)"><div><h1>Overnight, and awake by the sea</h1><p>Sleeper berths, chai at dawn and a coastline you will not forget.</p><a class="btn" href="routes.html">Explore routes</a></div></div><div class="slide" style="background-image:url(img/slide-3.svg)"><div><h1>Weekend lines, weekday fares</h1><p>Hill stations and backwaters from ₹420.</p><a class="btn" href="routes.html">Explore routes</a></div></div><button class="arrow l" id="prev" aria-label="Previous">‹</button><button class="arrow r" id="next" aria-label="Next">›</button><div class="dots" id="dots"></div></section>
+<section class="finder"><div class="wrap"><form action="routes.html" method="get" class="find">
+  <input type="text" name="q" placeholder="Search routes, stations or offers..." aria-label="Search">
+  <select name="cat" aria-label="Category"><option value="">All categories</option><option>Scenic</option><option>Overnight</option><option>Heritage</option><option>Weekend</option></select><select name="price" aria-label="Price range"><option value="">Any price</option><option value="lo">Under ₹1,000</option><option value="mid">₹1,000 – ₹3,000</option><option value="hi">Above ₹3,000</option></select>
+  <button class="btn dark">Find trains</button></form></div></section>
+<section class="block"><div class="wrap">
+  <span class="eyebrow">Welcome aboard</span><h2 id="hello">Welcome to Junction 41</h2>
+  <p class="lede">We run six scenic lines and sell them honestly: real timetables, real fares, no hidden fees.
+  <button class="btn ghost" id="hb" type="button">Hover for a greeting</button></p>
+  <div class="cols" style="margin-top:2rem"><a class="rc" href="routes.html#0"><img src="img/travel-munnar.svg" alt="Tea Hills Express"><div><h3>Tea Hills Express</h3><p class="mono">Kochi → Munnar · from ₹890</p></div></a><a class="rc" href="routes.html#1"><img src="img/travel-goa.svg" alt="Konkan Sunrise"><div><h3>Konkan Sunrise</h3><p class="mono">Chennai → Goa · from ₹2850</p></div></a><a class="rc" href="routes.html#2"><img src="img/travel-jaipur.svg" alt="Pink City Limited"><div><h3>Pink City Limited</h3><p class="mono">Delhi → Jaipur · from ₹1450</p></div></a></div></div></section>
+<footer class="site-foot"><div class="wrap"><div><strong class="mono">Junction 41 · VIT Line</strong><br>
+  Designed and built by Priyansh Mudela (24MIC0126) · School of Computer Science and Engineering</div>
+  <div class="mono">More: <a href="fest.html">Rail Fest</a> · <a href="careers.html">Careers</a> · <a href="assist.html">Assistance</a> · <a href="account.html">Sign in</a></div>
+  <div class="mono">Mail the station master:<br><a href="mailto:priyansh.mudela2024@vitstudent.ac.in">priyansh.mudela2024@vitstudent.ac.in</a></div></div></footer><script src="js/site.js"></script><script src="js/slider.js"></script><script src="js/home.js"></script></body></html>

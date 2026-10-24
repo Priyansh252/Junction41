@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book · Junction 41</title><link rel="stylesheet" href="css/style.css">
+<style>.steps{display:flex;margin-bottom:2rem;font:600 1rem var(--display);letter-spacing:.1em;text-transform:uppercase}.steps a{flex:1;text-align:center;padding:.7rem .4rem;border:2px solid var(--ink);margin-left:-2px;text-decoration:none;color:var(--ink);background:#fbf6ea}.steps .now{background:var(--amber)}.steps a:hover{background:var(--paper-2)}</style></head><body>
+<div class="util"><div class="wrap"><span>Boarding from <strong>Chennai Central</strong></span>
+  <span><a href="status.html">Helpline 1800-41-4141</a> · <a href="account.html">Sign in</a> · <a href="summary.html">Basket <b class="cnt">1</b></a></span></div></div>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="lamp"></span>Junction <b>41</b></a>
+  <nav class="nav" id="nav"><a href="index.html">Home</a><a href="routes.html">Routes</a><a href="book.html" class=on>Book</a><a href="trips.html">My Trips</a><a href="status.html">Live</a><a href="journal.html">Journal</a><a href="about.html">About</a></nav>
+  <a class="btn" href="book.html">Book a seat</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">MENU</button></div></header><div class="plate"><div class="wrap"><div class="pf-no">1</div><div>
+  <span class="eyebrow">Book</span><h1>Book a seat</h1><p>Tell us who is travelling. Every field is checked in your browser before anything moves on.</p>
+  <div><span class="tag">regex test()</span><span class="tag">arrays</span><span class="tag">DOM table</span><span class="tag">sessionStorage</span></div></div></div></div><div class="rails"></div>
+
+<section class="block"><div class="wrap"><div class="steps"><a href="book.html" class=now>1 · Passenger</a><a href="payment.html">2 · Payment</a><a href="summary.html">3 · Basket</a></div>
+<form class="pass" id="bk" novalidate>
+  <div class="f"><label for="tr">Train</label><select id="tr" required><option value="">Choose a train</option><option value="650">Nilgiri Whistle · Mettupalayam → Ooty</option><option value="2850">Konkan Sunrise · Chennai → Goa</option><option value="1450">Pink City Limited · Delhi → Jaipur</option><option value="890">Tea Hills Express · Kochi → Munnar</option><option value="3400">Valley Arrow · Jammu → Srinagar</option><option value="420">Backwater Slow · Alappuzha → Kollam</option></select><span class="err" data-for="tr"></span></div>
+  <div class="f"><label for="dt">Travel date</label><input id="dt" type="date" required><span class="err" data-for="dt"></span></div>
+  <div class="f"><label for="px">Passengers</label><input id="px" type="number" min="1" max="6" value="1" required></div>
+  <div class="f"><label for="nm">Passenger name</label><input id="nm" required maxlength="40" placeholder="As on ID, letters only"><span class="err" data-for="nm"></span></div>
+  <div class="f"><label for="jp">Junction Pass no. (if any)</label><input id="jp" maxlength="8" placeholder="JN123456"><span class="err" data-for="jp"></span></div>
+  <div class="f"><label for="em">Email</label><input id="em" type="email" required placeholder="you@example.com"><span class="err" data-for="em"></span></div>
+  <div class="f"><label for="mb">Mobile</label><input id="mb" type="tel" maxlength="10" required placeholder="10 digits"><span class="err" data-for="mb"></span></div>
+  <div class="f"><label for="db">Date of birth</label><input id="db" type="date" required></div>
+  <fieldset class="f"><legend>Gender</legend><div class="opts"><label><input type="radio" name="gender" value="Female" required> Female</label><label><input type="radio" name="gender" value="Male" required> Male</label><label><input type="radio" name="gender" value="Other" required> Other</label></div></fieldset>
+  <fieldset class="f full"><legend>Preferences</legend><div class="opts"><label><input type="checkbox" name="pref" value="Window seat"> Window seat</label><label><input type="checkbox" name="pref" value="Lower berth"> Lower berth</label><label><input type="checkbox" name="pref" value="Vegetarian meal"> Vegetarian meal</label><label><input type="checkbox" name="pref" value="Extra luggage"> Extra luggage</label><label><input type="checkbox" name="pref" value="Travel insurance"> Travel insurance</label></div></fieldset>
+  <div class="actions"><button class="btn" type="submit">Confirm details</button><button class="btn ghost" type="reset" id="rs">Reset</button></div>
+  <div class="msg full" id="out"></div></form>
+<div id="result" style="margin-top:2rem"></div></div></section>
+<footer class="site-foot"><div class="wrap"><div><strong class="mono">Junction 41 · VIT Line</strong><br>
+  Designed and built by Priyansh Mudela (24MIC0126) · School of Computer Science and Engineering</div>
+  <div class="mono">More: <a href="fest.html">Rail Fest</a> · <a href="careers.html">Careers</a> · <a href="assist.html">Assistance</a> · <a href="account.html">Sign in</a></div>
+  <div class="mono">Mail the station master:<br><a href="mailto:priyansh.mudela2024@vitstudent.ac.in">priyansh.mudela2024@vitstudent.ac.in</a></div></div></footer><script src="js/site.js"></script><script src="js/book.js"></script></body></html>

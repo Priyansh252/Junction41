@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Routes · Junction 41</title><link rel="stylesheet" href="css/style.css">
+<style>.gallery{display:flex;flex-direction:column;gap:2rem}.shot{display:grid;grid-template-columns:3fr 2fr;border:2px solid var(--ink);background:#fbf6ea;box-shadow:7px 7px 0 var(--ink)}
+.shot:nth-child(even){grid-template-columns:2fr 3fr}.shot:nth-child(even) img{order:2}.shot img{width:100%;height:100%;min-height:240px;object-fit:cover}.shot div{padding:1.8rem;align-self:center}
+.stack{display:grid;gap:1rem}.vw{width:100%;aspect-ratio:3/2;object-fit:cover;border:3px solid var(--ink);margin-bottom:.8rem}tr.hide{display:none}@media(max-width:700px){.shot,.shot:nth-child(even){grid-template-columns:1fr}.shot:nth-child(even) img{order:0}table{font-size:.85rem}}</style></head><body>
+<div class="util"><div class="wrap"><span>Boarding from <strong>Chennai Central</strong></span>
+  <span><a href="status.html">Helpline 1800-41-4141</a> · <a href="account.html">Sign in</a> · <a href="summary.html">Basket <b class="cnt">1</b></a></span></div></div>
+<header class="site-head"><div class="wrap">
+  <a class="logo" href="index.html"><span class="lamp"></span>Junction <b>41</b></a>
+  <nav class="nav" id="nav"><a href="index.html">Home</a><a href="routes.html" class=on>Routes</a><a href="book.html">Book</a><a href="trips.html">My Trips</a><a href="status.html">Live</a><a href="journal.html">Journal</a><a href="about.html">About</a></nav>
+  <a class="btn" href="book.html">Book a seat</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Menu">MENU</button></div></header><div class="plate"><div class="wrap"><div class="pf-no">→</div><div>
+  <span class="eyebrow">Routes</span><h1>Routes & timetable</h1><p>Filter by what you typed on the home page, browse the lines, add up a multi-leg fare, or flip through the views with your keyboard.</p>
+  <div><span class="tag">table</span><span class="tag">URL search filter</span><span class="tag">div gallery</span><span class="tag">keydown</span></div></div></div></div><div class="rails"></div>
+
+<section class="block"><div class="wrap"><span class="eyebrow">Timetable</span><h2>All departures</h2>
+<p class="mono" id="count"></p>
+<table id="tt"><thead><tr><th>Train</th><th>Route</th><th>Departs</th><th>Duration</th><th>Type</th><th>Fare</th></tr></thead><tbody><tr data-cat="Heritage" data-fare="650" id="0"><td><strong>Nilgiri Whistle</strong></td><td>Mettupalayam → Ooty</td><td>07:10</td><td>4h 40m</td><td>Heritage</td><td>₹650</td></tr><tr data-cat="Overnight" data-fare="2850" id="1"><td><strong>Konkan Sunrise</strong></td><td>Chennai → Goa</td><td>18:45</td><td>21h 10m</td><td>Overnight</td><td>₹2,850</td></tr><tr data-cat="Scenic" data-fare="1450" id="2"><td><strong>Pink City Limited</strong></td><td>Delhi → Jaipur</td><td>06:05</td><td>4h 30m</td><td>Scenic</td><td>₹1,450</td></tr><tr data-cat="Weekend" data-fare="890" id="3"><td><strong>Tea Hills Express</strong></td><td>Kochi → Munnar</td><td>08:30</td><td>5h 15m</td><td>Weekend</td><td>₹890</td></tr><tr data-cat="Scenic" data-fare="3400" id="4"><td><strong>Valley Arrow</strong></td><td>Jammu → Srinagar</td><td>09:20</td><td>6h 50m</td><td>Scenic</td><td>₹3,400</td></tr><tr data-cat="Weekend" data-fare="420" id="5"><td><strong>Backwater Slow</strong></td><td>Alappuzha → Kollam</td><td>10:00</td><td>3h 05m</td><td>Weekend</td><td>₹420</td></tr></tbody></table></div></section>
+<section class="block"><div class="wrap"><span class="eyebrow">The lines</span><h2>Four views from the window seat</h2><div class="gallery"><div class="shot"><img src="img/nature-forest.svg" alt="Nilgiri Whistle"><div><h3>Nilgiri Whistle</h3><p>A narrow-gauge toy train climbs through pine and tea, crossing 250 bridges on the way to Ooty.</p><a href="book.html">Book this line →</a></div></div><div class="shot"><img src="img/nature-lake.svg" alt="Backwater Slow"><div><h3>Backwater Slow</h3><p>Glide past coconut palms and still green water, with houseboats for company.</p><a href="book.html">Book this line →</a></div></div><div class="shot"><img src="img/nature-desert.svg" alt="Pink City Limited"><div><h3>Pink City Limited</h3><p>Golden-hour dunes and sandstone forts, framed by a wide window.</p><a href="book.html">Book this line →</a></div></div><div class="shot"><img src="img/nature-alpine.svg" alt="Valley Arrow"><div><h3>Valley Arrow</h3><p>Snow ridges and apple orchards on the climb into Kashmir.</p><a href="book.html">Book this line →</a></div></div></div></div></section>
+<section class="block"><div class="wrap cols">
+ <div class="ticket"><h3>Trip fare calculator</h3><p>Planning a multi-leg trip? Enter each leg's fare.</p>
+  <form id="fare" novalidate class="stack"><div class="f"><label for="l1">Leg 1 (₹)</label><input id="l1" type="number" min="0"></div>
+  <div class="f"><label for="l2">Leg 2 (₹)</label><input id="l2" type="number" min="0"></div><div class="f"><label for="l3">Leg 3 (₹)</label><input id="l3" type="number" min="0"></div>
+  <button class="btn" type="submit">Calculate</button><div class="msg" id="fareOut"></div></form></div>
+ <div class="ticket"><h3>Scenic preview</h3><img id="trv" src="img/travel-goa.svg" alt="Destination" class="vw"><p class="mono">N next · P previous · Space names it · click here first</p><p class="mono" id="trvMsg" style="min-height:1.4em"></p></div>
+</div></section>
+<footer class="site-foot"><div class="wrap"><div><strong class="mono">Junction 41 · VIT Line</strong><br>
+  Designed and built by Priyansh Mudela (24MIC0126) · School of Computer Science and Engineering</div>
+  <div class="mono">More: <a href="fest.html">Rail Fest</a> · <a href="careers.html">Careers</a> · <a href="assist.html">Assistance</a> · <a href="account.html">Sign in</a></div>
+  <div class="mono">Mail the station master:<br><a href="mailto:priyansh.mudela2024@vitstudent.ac.in">priyansh.mudela2024@vitstudent.ac.in</a></div></div></footer><script src="js/site.js"></script><script src="js/routes.js"></script></body></html>
